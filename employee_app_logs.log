@@ -1,0 +1,301 @@
+2025-09-11 15:31:36,483 [INFO] BEGIN (implicit)
+2025-09-11 15:31:36,484 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 15:31:36,484 [INFO] [generated in 0.00012s] ()
+2025-09-11 15:31:36,485 [INFO] read all employees.
+2025-09-11 15:31:48,992 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 15:31:48,992 [INFO] [generated in 0.00068s] (7, 'dfg', 23, 345.0, 0)
+2025-09-11 15:31:48,993 [INFO] ROLLBACK
+2025-09-11 15:31:48,993 [ERROR] Duplicate employee id:(sqlite3.IntegrityError) UNIQUE constraint failed: employees.id
+[SQL: INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)]
+[parameters: (7, 'dfg', 23, 345.0, 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-11 18:06:06,679 [INFO] BEGIN (implicit)
+2025-09-11 18:06:06,683 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:06:06,684 [INFO] [generated in 0.00048s] ()
+2025-09-11 18:06:06,684 [INFO] read all employees.
+2025-09-11 18:08:04,721 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 18:08:04,723 [INFO] [generated in 0.00179s] (9, 'dfg', 45, 345.0, 1)
+2025-09-11 18:08:04,725 [INFO] COMMIT
+2025-09-11 18:08:04,726 [INFO] employee created.
+2025-09-11 18:08:25,065 [INFO] BEGIN (implicit)
+2025-09-11 18:08:25,066 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 18:08:25,066 [INFO] [cached since 20.34s ago] (9, 'dfgh', 567, 98765.0, 0)
+2025-09-11 18:08:25,066 [INFO] ROLLBACK
+2025-09-11 18:08:25,067 [ERROR] Duplicate employee id:(sqlite3.IntegrityError) UNIQUE constraint failed: employees.id
+[SQL: INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)]
+[parameters: (9, 'dfgh', 567, 98765.0, 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-11 18:10:34,461 [INFO] BEGIN (implicit)
+2025-09-11 18:10:34,462 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:10:34,462 [INFO] [cached since 267.8s ago] ()
+2025-09-11 18:10:34,463 [INFO] read all employees.
+2025-09-11 18:11:41,829 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:11:41,830 [INFO] [generated in 0.00071s] (9, 1, 0)
+2025-09-11 18:11:41,831 [INFO] read employee model by ID.
+2025-09-11 18:11:41,831 [INFO] read employee for given id.
+2025-09-11 18:13:04,137 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:13:04,137 [INFO] [cached since 82.29s ago] (10, 1, 0)
+2025-09-11 18:13:04,138 [INFO] read employee model by ID.
+2025-09-11 18:13:04,138 [INFO] employee not found 10.
+2025-09-11 18:15:15,517 [INFO] BEGIN (implicit)
+2025-09-11 18:15:15,520 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:15:15,520 [INFO] [generated in 0.00028s] ()
+2025-09-11 18:15:15,521 [INFO] read all employees.
+2025-09-11 18:15:30,082 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:15:30,082 [INFO] [generated in 0.00033s] (10, 1, 0)
+2025-09-11 18:15:30,083 [INFO] read employee model by ID.
+2025-09-11 18:16:09,702 [INFO] BEGIN (implicit)
+2025-09-11 18:16:09,705 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:16:09,705 [INFO] [generated in 0.00028s] ()
+2025-09-11 18:16:09,706 [INFO] read all employees.
+2025-09-11 18:16:41,935 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:16:41,935 [INFO] [generated in 0.00062s] (10, 1, 0)
+2025-09-11 18:16:41,936 [INFO] read employee model by ID.
+2025-09-11 18:16:41,936 [INFO] employee not found 10.
+2025-09-11 18:18:51,521 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:18:51,521 [INFO] [cached since 129.6s ago] (9, 1, 0)
+2025-09-11 18:18:51,522 [INFO] read employee model by ID.
+2025-09-11 18:18:51,522 [INFO] read employee for given id.
+2025-09-11 18:18:56,669 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:18:56,670 [INFO] [cached since 134.7s ago] (9, 1, 0)
+2025-09-11 18:18:56,670 [INFO] read employee model by ID.
+2025-09-11 18:18:56,672 [INFO] UPDATE employees SET salary=? WHERE employees.id = ?
+2025-09-11 18:18:56,672 [INFO] [generated in 0.00023s] (98765.0, 9)
+2025-09-11 18:18:56,673 [INFO] COMMIT
+2025-09-11 18:18:56,675 [INFO] employee salary updated.
+2025-09-11 18:22:03,865 [INFO] BEGIN (implicit)
+2025-09-11 18:22:03,866 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:22:03,866 [INFO] [cached since 321.9s ago] (10, 1, 0)
+2025-09-11 18:22:03,867 [INFO] read employee model by ID.
+2025-09-11 18:22:03,867 [INFO] employee not found 10.
+2025-09-11 18:24:41,515 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:24:41,515 [INFO] [cached since 479.6s ago] (9, 1, 0)
+2025-09-11 18:24:41,516 [INFO] read employee model by ID.
+2025-09-11 18:24:41,516 [INFO] read employee for given id.
+2025-09-11 18:24:41,516 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:24:41,516 [INFO] [cached since 479.6s ago] (9, 1, 0)
+2025-09-11 18:24:41,517 [INFO] read employee model by ID.
+2025-09-11 18:24:41,518 [INFO] DELETE FROM employees WHERE employees.id = ?
+2025-09-11 18:24:41,518 [INFO] [generated in 0.00019s] (9,)
+2025-09-11 18:24:41,519 [INFO] COMMIT
+2025-09-11 18:24:41,521 [INFO] employee deleted.
+2025-09-11 18:25:17,036 [INFO] BEGIN (implicit)
+2025-09-11 18:25:17,036 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:25:17,037 [INFO] [cached since 515.1s ago] (9, 1, 0)
+2025-09-11 18:25:17,037 [INFO] read employee model by ID.
+2025-09-11 18:25:17,037 [INFO] employee not found 9.
+2025-09-11 18:26:34,628 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 18:26:34,629 [INFO] [generated in 0.00039s] (7, 'dfgh', 76, 87654.0, 1)
+2025-09-11 18:26:34,629 [INFO] ROLLBACK
+2025-09-11 18:26:34,629 [ERROR] Duplicate employee id:(sqlite3.IntegrityError) UNIQUE constraint failed: employees.id
+[SQL: INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)]
+[parameters: (7, 'dfgh', 76, 87654.0, 1)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-11 18:32:52,907 [INFO] BEGIN (implicit)
+2025-09-11 18:32:52,912 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 18:32:52,912 [INFO] [generated in 0.00049s] (9, 'hgfd', 765, 3456.0, 0)
+2025-09-11 18:32:52,914 [INFO] COMMIT
+2025-09-11 18:32:52,915 [INFO] employee created.
+2025-09-11 18:33:32,576 [INFO] BEGIN (implicit)
+2025-09-11 18:33:32,577 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-11 18:33:32,577 [INFO] [cached since 39.67s ago] (9, 'dfg', 65, 8765.0, 0)
+2025-09-11 18:33:32,577 [INFO] ROLLBACK
+2025-09-11 18:33:32,578 [ERROR] Duplicate employee id:(sqlite3.IntegrityError) UNIQUE constraint failed: employees.id
+[SQL: INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)]
+[parameters: (9, 'dfg', 65, 8765.0, 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-11 18:34:29,428 [INFO] BEGIN (implicit)
+2025-09-11 18:34:29,431 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:34:29,431 [INFO] [generated in 0.00025s] ()
+2025-09-11 18:34:29,432 [INFO] read all employees.
+2025-09-11 18:35:14,520 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:35:14,520 [INFO] [generated in 0.00036s] (9, 1, 0)
+2025-09-11 18:35:14,521 [INFO] read employee model by ID.
+2025-09-11 18:35:14,521 [INFO] read employee for given id.
+2025-09-11 18:36:15,845 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:36:15,845 [INFO] [cached since 61.33s ago] (10, 1, 0)
+2025-09-11 18:36:15,847 [INFO] read employee model by ID.
+2025-09-11 18:36:15,847 [INFO] employee not found 10.
+2025-09-11 18:39:30,322 [INFO] BEGIN (implicit)
+2025-09-11 18:39:30,325 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:39:30,325 [INFO] [generated in 0.00030s] ()
+2025-09-11 18:39:30,327 [INFO] read all employees.
+2025-09-11 18:39:36,321 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:39:36,322 [INFO] [generated in 0.00076s] (10, 1, 0)
+2025-09-11 18:39:36,323 [INFO] read employee model by ID.
+2025-09-11 18:40:20,516 [INFO] BEGIN (implicit)
+2025-09-11 18:40:20,520 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:40:20,521 [INFO] [generated in 0.00043s] ()
+2025-09-11 18:40:20,522 [INFO] read all employees.
+2025-09-11 18:40:27,156 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:40:27,156 [INFO] [generated in 0.00060s] (10, 1, 0)
+2025-09-11 18:40:27,157 [INFO] read employee model by ID.
+2025-09-11 18:41:04,449 [INFO] BEGIN (implicit)
+2025-09-11 18:41:04,452 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:41:04,452 [INFO] [generated in 0.00025s] ()
+2025-09-11 18:41:04,453 [INFO] read all employees.
+2025-09-11 18:41:12,949 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:41:12,949 [INFO] [generated in 0.00071s] (10, 1, 0)
+2025-09-11 18:41:12,950 [INFO] read employee model by ID.
+2025-09-11 18:41:44,758 [INFO] BEGIN (implicit)
+2025-09-11 18:41:44,762 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-11 18:41:44,763 [INFO] [generated in 0.00048s] ()
+2025-09-11 18:41:44,764 [INFO] read all employees.
+2025-09-11 18:41:56,643 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-11 18:41:56,643 [INFO] [generated in 0.00040s] (10, 1, 0)
+2025-09-11 18:41:56,644 [INFO] read employee model by ID.
+2025-09-11 18:41:56,644 [INFO] employee not found 10.
+2025-09-12 09:02:14,829 [INFO] BEGIN (implicit)
+2025-09-12 09:02:14,831 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees
+2025-09-12 09:02:14,832 [INFO] [generated in 0.00027s] ()
+2025-09-12 09:02:14,832 [INFO] read all employees.
+2025-09-12 09:03:31,763 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-12 09:03:31,763 [INFO] [generated in 0.00091s] (10, 'fghj', 345, 6543.0, 1)
+2025-09-12 09:03:31,765 [INFO] COMMIT
+2025-09-12 09:03:31,767 [INFO] employee created.
+2025-09-12 09:04:24,314 [INFO] BEGIN (implicit)
+2025-09-12 09:04:24,315 [INFO] INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)
+2025-09-12 09:04:24,315 [INFO] [cached since 52.55s ago] (10, 'kjuyt', 98, 987654.0, 0)
+2025-09-12 09:04:24,316 [INFO] ROLLBACK
+2025-09-12 09:04:24,316 [ERROR] Duplicate employee id:(sqlite3.IntegrityError) UNIQUE constraint failed: employees.id
+[SQL: INSERT INTO employees (id, name, age, salary, is_active) VALUES (?, ?, ?, ?, ?)]
+[parameters: (10, 'kjuyt', 98, 987654.0, 0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-12 09:05:34,051 [INFO] BEGIN (implicit)
+2025-09-12 09:05:34,053 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:05:34,053 [INFO] [generated in 0.00028s] (10, 1, 0)
+2025-09-12 09:05:34,054 [INFO] read employee model by ID.
+2025-09-12 09:05:34,054 [INFO] read employee for given id.
+2025-09-12 09:06:58,920 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:06:58,921 [INFO] [cached since 84.87s ago] (66, 1, 0)
+2025-09-12 09:06:58,922 [INFO] read employee model by ID.
+2025-09-12 09:36:24,007 [INFO] BEGIN (implicit)
+2025-09-12 09:36:24,012 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:36:24,012 [INFO] [generated in 0.00037s] (9, 1, 0)
+2025-09-12 09:36:24,013 [INFO] read employee model by ID.
+2025-09-12 09:36:24,013 [INFO] read employee for given id.
+2025-09-12 09:36:47,574 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:36:47,574 [INFO] [cached since 23.56s ago] (87, 1, 0)
+2025-09-12 09:36:47,575 [INFO] read employee model by ID.
+2025-09-12 09:36:47,575 [ERROR] Employee not found, ID: 87
+2025-09-12 09:37:32,365 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:37:32,366 [INFO] [cached since 68.35s ago] (9, 1, 0)
+2025-09-12 09:37:32,366 [INFO] read employee model by ID.
+2025-09-12 09:37:32,367 [INFO] read employee for given id.
+2025-09-12 09:37:39,013 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:37:39,013 [INFO] [cached since 75s ago] (9, 1, 0)
+2025-09-12 09:37:39,014 [INFO] read employee model by ID.
+2025-09-12 09:37:39,017 [INFO] UPDATE employees SET salary=? WHERE employees.id = ?
+2025-09-12 09:37:39,017 [INFO] [generated in 0.00025s] (98765.0, 9)
+2025-09-12 09:37:39,020 [INFO] COMMIT
+2025-09-12 09:37:39,021 [INFO] employee salary updated.
+2025-09-12 09:38:19,320 [INFO] BEGIN (implicit)
+2025-09-12 09:38:19,321 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:38:19,321 [INFO] [cached since 115.3s ago] (9876, 1, 0)
+2025-09-12 09:38:19,322 [INFO] read employee model by ID.
+2025-09-12 09:38:19,322 [ERROR] Employee not found, ID: 9876
+2025-09-12 09:39:01,794 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:39:01,794 [INFO] [cached since 157.8s ago] (9, 1, 0)
+2025-09-12 09:39:01,795 [INFO] read employee model by ID.
+2025-09-12 09:39:01,795 [INFO] read employee for given id.
+2025-09-12 09:39:01,796 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:39:01,796 [INFO] [cached since 157.8s ago] (9, 1, 0)
+2025-09-12 09:39:01,796 [INFO] read employee model by ID.
+2025-09-12 09:39:01,798 [INFO] DELETE FROM employees WHERE employees.id = ?
+2025-09-12 09:39:01,798 [INFO] [generated in 0.00023s] (9,)
+2025-09-12 09:39:01,799 [INFO] COMMIT
+2025-09-12 09:39:01,801 [INFO] employee deleted.
+2025-09-12 09:40:29,826 [INFO] BEGIN (implicit)
+2025-09-12 09:40:29,827 [INFO] SELECT employees.id AS employees_id, employees.name AS employees_name, employees.age AS employees_age, employees.salary AS employees_salary, employees.is_active AS employees_is_active 
+FROM employees 
+WHERE employees.id = ?
+ LIMIT ? OFFSET ?
+2025-09-12 09:40:29,827 [INFO] [cached since 245.8s ago] (9, 1, 0)
+2025-09-12 09:40:29,827 [INFO] read employee model by ID.
+2025-09-12 09:40:29,828 [ERROR] Employee not found, ID: 9

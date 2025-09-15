@@ -1,3 +1,6 @@
+"""
+Module Docstring
+"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from .db_models import Base, Flight
@@ -8,4 +11,3 @@ Base.metadata.create_all(engine) # creates tables
 # session for sql operations
 SessionLocal=sessionmaker(bind=engine)
 session=SessionLocal()
-

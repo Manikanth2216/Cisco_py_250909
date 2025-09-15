@@ -1,3 +1,6 @@
+"""
+Module DocString
+"""
 import logging
 logging.basicConfig(
     filename="flight_app_logs.log",

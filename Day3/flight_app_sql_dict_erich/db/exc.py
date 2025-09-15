@@ -1,11 +1,22 @@
+"""
+Module DocString
+"""
 class FlightException(Exception):
-    pass
+    """
+    Class DocString
+    """
 
 class FlightNotFound(FlightException):
-    pass
+    """
+    Class DocString
+    """
 
 class FlightAlreadyExistError(FlightException):
-    pass
+    """
+    Class DocString
+    """
 
 class DatabaseError(FlightException):
-    pass
+    """
+    Class DocString
+    """

@@ -1,11 +1,17 @@
+"""
+Module Docstring
+"""
 from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, String, Integer, Float, Boolean
+from sqlalchemy import Column, String, Integer, Float
 
 Base= declarative_base() # model base class
 
 #models
 
 class Flight(Base): # our model class employee defined from ORM
+    """
+    Class Docstring
+    """
     __tablename__ = "flights"
     id=Column(Integer, primary_key=True)
     flight_number=Column(String(255), nullable=False)
@@ -18,4 +24,16 @@ class Flight(Base): # our model class employee defined from ORM
 
 
     def __repr__(self):
-        return f'[id={self.id}, flight_number={self.flight_number}, flight_model={self.flight_model}, airline_name={self.airline_name}, seats={self.seats}, price={self.price}, source={self.source}, destination={self.destination}]'
+        """
+        Comment
+        """
+        return f'[id={self.id}, flight_number={self.flight_number}, ' + \
+            f'flight_model={self.flight_model}, ' + \
+            f'airline_name={self.airline_name}, seats={self.seats}, price={self.price}, ' + \
+            f'source={self.source},destination={self.destination}]'
+
+    def __str__(self):
+        """
+        Comment
+        """
+        return self.__repr__()

@@ -26,7 +26,8 @@ Your Option:''#'
         destination = input('Destination:')
 
         flight = {'id':id, 'flight_number':flight_number, 'flight_model':flight_model,
-                  'airline_name':airline_name, 'seats':seats, 'price':price, 'source':source, 'destination':destination}
+                  'airline_name':airline_name, 'seats':seats, 'price':price,
+                  'source':source, 'destination':destination}
 
         try:  
             repo.create_flight(flight)
@@ -100,6 +101,9 @@ menus()
 from db import repo_sql_dict as repo
 
 def menu():
+    """
+    Function DocString
+    """
     message = '''
 Options are:
 1 - Create Flight
@@ -127,7 +131,8 @@ Your Option: '''
             source = input('Source:')
             destination = input('Destination:')
             flight = {'id':id, 'flight_number':flight_number, 'flight_model':flight_model,
-                  'airline_name':airline_name, 'seats':seats, 'price':price, 'source':source, 'destination':destination}
+                      'airline_name':airline_name, 'seats':seats, 'price':price,
+                      'source':source, 'destination':destination}
             repo.create_flight(flight)
             print('Flight Created Successfully.')
 
@@ -176,6 +181,9 @@ Your Option: '''
     return choice
 
 def run_app():
+    """
+    Function DocString
+    """
     while True:
         choice = menu()
         if choice == 6:

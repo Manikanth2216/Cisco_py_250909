@@ -1,11 +1,17 @@
-from .db_setup import session, Flight 
-from .log import logging 
+"""
+Module DocString
+"""
 from sqlalchemy.exc import SQLAlchemyError, IntegrityError
+from .db_setup import session, Flight
+from .log import logging
 from .exc import FlightNotFound,FlightAlreadyExistError,DatabaseError
 #CRUD (Create, Read All | Read One, Update, Delete)
 #Flight App - SQL DB - dict element
 
 def create_flight(flight):
+    """
+    Function DocString
+    """
     try:
         flight_model = Flight(
             id = flight['id'],
@@ -17,9 +23,8 @@ def create_flight(flight):
             source=flight['source'],
             destination=flight['destination']
         )
-        
-        session.add(flight_model) #INSERT stmt db 
-        session.commit() 
+        session.add(flight_model) #INSERT stmt db
+        session.commit()
         logging.info("Flight created.")
     except IntegrityError as ex:
         session.rollback()
@@ -31,6 +36,9 @@ def create_flight(flight):
         raise DatabaseError("Error in creating flight.")
 
 def read_all_flights():
+    """
+    Function DocString
+    """
     try:
         flights = session.query(Flight).all()
         dict_flights = []
@@ -51,8 +59,11 @@ def read_all_flights():
     except SQLAlchemyError as ex:
         session.rollback()
         logging.error("Database error in Reading Flights:%s",ex)
-        raise DatabaseError("Error in Reading all Flights.") 
+        raise DatabaseError("Error in Reading all Flights.")
 def read_model_by_id(id):
+    """
+    Function DocString
+    """
     try:
         flight = session.query(Flight).filter_by(id = id).first()
         logging.info("Read Flight model by ID.")
@@ -67,6 +78,9 @@ def read_model_by_id(id):
         raise DatabaseError("Error in Reading Flight model by ID.")
 
 def read_by_id(id):
+    """
+    Function DocString
+    """
     try:
         flight = read_model_by_id(id)
         if not flight:
@@ -81,7 +95,7 @@ def read_by_id(id):
             'price':flight.price,
             'source':flight.source,
             'destination':flight.destination
-        } 
+        }
         logging.info("Read flight for given ID.")
         return flight_dict
     except SQLAlchemyError as ex:
@@ -90,6 +104,9 @@ def read_by_id(id):
         raise DatabaseError("Error in Reading Flight by ID.")
 
 def update(id, new_flight):
+    """
+    Function DocString
+    """
     try:
         flight = read_model_by_id(id)
         if not flight:
@@ -101,9 +118,12 @@ def update(id, new_flight):
     except SQLAlchemyError as ex:
         session.rollback()
         logging.error("Database error in Updating Flight by ID:%s",ex)
-        raise DatabaseError("Error in Updating Flight  by ID.")
-    
+        raise DatabaseError("Error in Updating Flight by ID.")
+
 def delete_flight(id):
+    """
+    Function DocString
+    """
     try:
         flight = read_model_by_id(id)
         if not flight:
@@ -115,4 +135,4 @@ def delete_flight(id):
     except SQLAlchemyError as ex:
         session.rollback()
         logging.error("Database error in Deleting Flight by ID:%s",ex)
-        raise DatabaseError("Error in Deleting Flight m by ID.")
+        raise DatabaseError("Error in Deleting Flight by ID.")

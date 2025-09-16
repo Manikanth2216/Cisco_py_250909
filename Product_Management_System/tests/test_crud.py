@@ -1,9 +1,5 @@
 import pytest
-from sqlalchemy.orm import declarative_base, sessionmaker
-from sqlalchemy import create_engine
-from sqlalchemy import Column, String, Integer, Float
-import sys
-import os
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from client import repo
 

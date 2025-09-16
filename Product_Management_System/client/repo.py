@@ -1,4 +1,7 @@
 import requests
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'app')))
 from app.logger import logging
 
 BASE_URL = "http://127.0.0.1:5000"

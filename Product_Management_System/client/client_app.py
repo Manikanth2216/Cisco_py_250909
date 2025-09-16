@@ -16,9 +16,9 @@ Your Option:'''
         id = int(input('ID:'))
         name = input('Name:')
         price = float(input('Price:'))
-        quantity = int(input('Quantity:'))  
+        qty = int(input('Quantity:'))  
 
-        product = {'id':id, 'name':name, 'price':price, 'quantity':quantity}
+        product = {'id':id, 'name':name, 'price':price, 'qty':qty}
 
         createdProduct = repo.create_product(product)
         print(f'Created:{createdProduct}')
@@ -42,10 +42,10 @@ Your Option:'''
         else:
             print(product)
             price = float(input('New Price:'))
-            quantity = int(input('New Quantity:'))
+            qty = int(input('New Quantity:'))
             new_product = {
                 'price':price,
-                'quantity':quantity}
+                'qty':qty}
             updatedProduct = repo.update(id, new_product)
             print(f'Updated:{updatedProduct}')
             print('Product updated successfully.')

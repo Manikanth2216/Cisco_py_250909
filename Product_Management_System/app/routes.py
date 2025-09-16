@@ -3,6 +3,7 @@ from datetime import datetime
 import app.crud as crud
 from app.config import config
 import app.emailer as mail
+
 application=Flask(__name__)
 # db coonection string
 application.config['SQLALCHEMY_DATABASE_URI'] = config['DB_URL']

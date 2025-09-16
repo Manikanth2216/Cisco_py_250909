@@ -1,4 +1,4 @@
-from models import db, Product
+from app.models import db, Product
 
 def create_product(product):
     product_model = Product(

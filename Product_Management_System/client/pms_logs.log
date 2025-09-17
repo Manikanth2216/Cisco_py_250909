@@ -1,0 +1,11 @@
+2025-09-17 13:56:16,193 [INFO] Fetched all products.
+2025-09-17 13:56:52,212 [INFO] Product created: {'id': 7, 'name': 'erg', 'price': 4.0, 'qty': 54}
+2025-09-17 13:57:17,989 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 13:57:45,833 [INFO] Fetched product by ID 7.
+2025-09-17 13:57:57,312 [WARNING] Product ID 987 not found.
+2025-09-17 13:58:07,238 [INFO] Fetched product by ID 7.
+2025-09-17 13:58:17,635 [INFO] Updated product ID 7: {'message': 'Product updated successfully'}
+2025-09-17 13:58:28,005 [WARNING] Product ID 567 not found.
+2025-09-17 13:58:37,980 [INFO] Fetched product by ID 7.
+2025-09-17 13:58:44,947 [INFO] Deleted product ID 7
+2025-09-17 13:58:54,405 [WARNING] Product ID 567 not found.

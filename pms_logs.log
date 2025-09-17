@@ -1,0 +1,21 @@
+2025-09-17 00:38:01,683 [INFO] BEGIN (implicit)
+2025-09-17 00:38:01,684 [INFO] PRAGMA main.table_info("products")
+2025-09-17 00:38:01,684 [INFO] [raw sql] ()
+2025-09-17 00:38:01,684 [INFO] PRAGMA temp.table_info("products")
+2025-09-17 00:38:01,684 [INFO] [raw sql] ()
+2025-09-17 00:38:01,684 [INFO] 
+CREATE TABLE products (
+	id INTEGER NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	qty INTEGER NOT NULL, 
+	price FLOAT NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-09-17 00:38:01,684 [INFO] [no key 0.00007s] ()
+2025-09-17 00:38:01,685 [INFO] COMMIT
+2025-09-17 00:41:23,195 [INFO] BEGIN (implicit)
+2025-09-17 00:41:23,195 [INFO] PRAGMA main.table_info("products")
+2025-09-17 00:41:23,195 [INFO] [raw sql] ()
+2025-09-17 00:41:23,195 [INFO] COMMIT

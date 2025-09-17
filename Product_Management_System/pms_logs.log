@@ -1,61 +1,31 @@
-2025-09-16 23:46:49,966 [INFO] BEGIN (implicit)
-2025-09-16 23:46:49,966 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:46:49,966 [INFO] [raw sql] ()
-2025-09-16 23:46:49,967 [INFO] COMMIT
-2025-09-16 23:46:50,001 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-09-16 23:46:50,001 [INFO] [33mPress CTRL+C to quit[0m
-2025-09-16 23:46:50,002 [INFO]  * Restarting with stat
-2025-09-16 23:46:50,202 [INFO] BEGIN (implicit)
-2025-09-16 23:46:50,202 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:46:50,202 [INFO] [raw sql] ()
-2025-09-16 23:46:50,202 [INFO] COMMIT
-2025-09-16 23:46:50,221 [WARNING]  * Debugger is active!
-2025-09-16 23:46:50,234 [INFO]  * Debugger PIN: 119-671-338
-2025-09-16 23:47:53,473 [INFO] BEGIN (implicit)
-2025-09-16 23:47:53,473 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:47:53,473 [INFO] [raw sql] ()
-2025-09-16 23:47:53,474 [INFO] COMMIT
-2025-09-16 23:47:53,505 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-09-16 23:47:53,505 [INFO] [33mPress CTRL+C to quit[0m
-2025-09-16 23:47:53,505 [INFO]  * Restarting with stat
-2025-09-16 23:47:53,703 [INFO] BEGIN (implicit)
-2025-09-16 23:47:53,703 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:47:53,703 [INFO] [raw sql] ()
-2025-09-16 23:47:53,703 [INFO] COMMIT
-2025-09-16 23:47:53,719 [WARNING]  * Debugger is active!
-2025-09-16 23:47:53,732 [INFO]  * Debugger PIN: 119-671-338
-2025-09-16 23:51:58,484 [INFO]  * Detected change in '/Users/mmadisha/Cisco_py_250909/Product_Management_System/client/repo.py', reloading
-2025-09-16 23:51:58,568 [INFO]  * Restarting with stat
-2025-09-16 23:51:58,862 [INFO] BEGIN (implicit)
-2025-09-16 23:51:58,862 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:51:58,862 [INFO] [raw sql] ()
-2025-09-16 23:51:58,862 [INFO] COMMIT
-2025-09-16 23:51:58,892 [WARNING]  * Debugger is active!
-2025-09-16 23:51:58,918 [INFO]  * Debugger PIN: 119-671-338
-2025-09-16 23:52:00,937 [INFO]  * Detected change in '/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/routes.py', reloading
-2025-09-16 23:52:01,020 [INFO]  * Restarting with stat
-2025-09-16 23:52:01,232 [INFO] BEGIN (implicit)
-2025-09-16 23:52:01,233 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:52:01,233 [INFO] [raw sql] ()
-2025-09-16 23:52:01,233 [INFO] COMMIT
-2025-09-16 23:52:01,251 [WARNING]  * Debugger is active!
-2025-09-16 23:52:01,263 [INFO]  * Debugger PIN: 119-671-338
-2025-09-16 23:52:14,296 [INFO] BEGIN (implicit)
-2025-09-16 23:52:14,296 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:52:14,296 [INFO] [raw sql] ()
-2025-09-16 23:52:14,296 [INFO] COMMIT
-2025-09-16 23:52:14,320 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-09-16 23:52:14,320 [INFO] [33mPress CTRL+C to quit[0m
-2025-09-16 23:52:14,320 [INFO]  * Restarting with stat
-2025-09-16 23:52:14,514 [INFO] BEGIN (implicit)
-2025-09-16 23:52:14,515 [INFO] PRAGMA main.table_info("products")
-2025-09-16 23:52:14,515 [INFO] [raw sql] ()
-2025-09-16 23:52:14,515 [INFO] COMMIT
-2025-09-16 23:52:14,532 [WARNING]  * Debugger is active!
-2025-09-16 23:52:14,544 [INFO]  * Debugger PIN: 119-671-338
-2025-09-16 23:52:29,639 [INFO]  * Detected change in '/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/routes.py', reloading
-2025-09-16 23:52:29,702 [INFO]  * Restarting with stat
-2025-09-16 23:52:38,069 [INFO]  * Restarting with stat
+2025-09-17 00:12:28,463 [INFO] Read all products.
+2025-09-17 00:13:22,447 [INFO] Read product by ID.
+2025-09-17 00:13:59,006 [INFO] Product created.
+2025-09-17 00:14:23,754 [INFO] Read product by ID.
+2025-09-17 00:14:37,322 [INFO] Updated product by ID.
+2025-09-17 00:14:43,577 [INFO] Read all products.
+2025-09-17 00:32:23,996 [INFO] BEGIN (implicit)
+2025-09-17 00:32:23,996 [INFO] PRAGMA main.table_info("products")
+2025-09-17 00:32:23,996 [INFO] [raw sql] ()
+2025-09-17 00:32:23,996 [INFO] PRAGMA temp.table_info("products")
+2025-09-17 00:32:23,996 [INFO] [raw sql] ()
+2025-09-17 00:32:23,997 [INFO] 
+CREATE TABLE products (
+	id INTEGER NOT NULL, 
+	name VARCHAR(255) NOT NULL, 
+	qty INTEGER NOT NULL, 
+	price FLOAT NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2025-09-17 00:32:23,997 [INFO] [no key 0.00006s] ()
+2025-09-17 00:32:23,997 [INFO] COMMIT
+2025-09-17 00:34:09,503 [INFO] BEGIN (implicit)
+2025-09-17 00:34:09,503 [INFO] PRAGMA main.table_info("products")
+2025-09-17 00:34:09,503 [INFO] [raw sql] ()
+2025-09-17 00:34:09,504 [INFO] COMMIT
+2025-09-17 00:36:00,339 [INFO] BEGIN (implicit)
+2025-09-17 00:36:00,339 [INFO] PRAGMA main.table_info("products")
+2025-09-17 00:36:00,339 [INFO] [raw sql] ()
+2025-09-17 00:36:00,339 [INFO] COMMIT

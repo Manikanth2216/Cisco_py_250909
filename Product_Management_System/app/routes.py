@@ -57,10 +57,34 @@ def update(product_id):
     product_dict = request.json
     crud.update(product_id, product_dict)
     updated_product = crud.read_by_id(product_id)
+    #send mail when updated
+    now=datetime.now()
+    date_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
+    prod_id= product_dict["id"]
+    name= product_dict["name"]
+    qty=product_dict["qty"]
+    price=product_dict["price"]
+
+    subject=f'{date_time_str} Product {name} Updated.'
+    mail_body=f''' Product updated successfully
+    id:{prod_id}
+    name:{name}
+    qty:{qty}
+    price:{price}'''
+    result = mail.send_gmail(mail.to_address, subject, mail_body)
+    print(f'email sent?{result}')
     return jsonify(updated_product)
 
 @application.route('/products/<product_id>', methods = ['DELETE'])
 def delete(product_id):
     product_id=int(product_id)
     crud.delete_product(product_id)
+    #send mail when deleted
+    now=datetime.now()
+    date_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
+
+    subject=f'{date_time_str} Product {product_id} Deleted.'
+    mail_body=f''' Product deleted successfully'''
+    result = mail.send_gmail(mail.to_address, subject, mail_body)
+    print(f'email sent?{result}')
     return jsonify({'message': 'Product deleted successfully'}), 200

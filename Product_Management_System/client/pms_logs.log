@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-09-17 11:02:35,228 [INFO] Read all products.
 2025-09-17 11:02:56,862 [ERROR] Failed to create product. Status code: 500, Response: <!doctype html>
 <html lang=en>
@@ -967,3 +968,5 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2025-09-17 13:56:35,488 [INFO] Fetched product by ID 120.
 2025-09-17 13:56:42,518 [INFO] Deleted product ID 120
 2025-09-17 13:56:47,072 [INFO] Fetched all products.
+=======
+>>>>>>> 124dcb102cba3b072fb29729ddca7058645efe4d

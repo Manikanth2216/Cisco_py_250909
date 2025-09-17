@@ -1,0 +1,14 @@
+2025-09-17 01:52:48,168 [INFO] BEGIN (implicit)
+2025-09-17 01:52:48,172 [INFO] SELECT flights.id AS flights_id, flights.flight_number AS flights_flight_number, flights.flight_model AS flights_flight_model, flights.airline_name AS flights_airline_name, flights.seats AS flights_seats, flights.price AS flights_price, flights.source AS flights_source, flights.destination AS flights_destination 
+FROM flights
+2025-09-17 01:52:48,172 [INFO] [generated in 0.00053s] ()
+2025-09-17 01:52:48,173 [INFO] read all flights.
+2025-09-17 01:53:38,378 [INFO] INSERT INTO flights (id, flight_number, flight_model, airline_name, seats, price, source, destination) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-17 01:53:38,379 [INFO] [generated in 0.00067s] (1, '345f', 'rfgr3', 'dfgh', 45, 432.0, 'fgh', '543')
+2025-09-17 01:53:38,380 [INFO] COMMIT
+2025-09-17 01:53:38,382 [INFO] Flight created.
+2025-09-17 01:53:40,011 [INFO] BEGIN (implicit)
+2025-09-17 01:53:40,011 [INFO] SELECT flights.id AS flights_id, flights.flight_number AS flights_flight_number, flights.flight_model AS flights_flight_model, flights.airline_name AS flights_airline_name, flights.seats AS flights_seats, flights.price AS flights_price, flights.source AS flights_source, flights.destination AS flights_destination 
+FROM flights
+2025-09-17 01:53:40,012 [INFO] [cached since 51.84s ago] ()
+2025-09-17 01:53:40,012 [INFO] read all flights.

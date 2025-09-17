@@ -1,35 +1,32 @@
 import pytest
+from unittest.mock import patch
+import client.repo as repo
+from app.models import Product
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from client import repo
+@pytest.fixture(autouse=True)
+def setup():
+    # Placeholder for any setup/teardown logic (optional for now)
+    yield
 
-Base= declarative_base() 
+@patch('client.repo.requests.post')
+def test_create_product(mock_post):
+    # Create a SQLAlchemy model instance (not persisted to any DB)
+    product = Product(id=1, name='Laptop', qty=10, price=50000)
+    product_data = product.to_dict()
 
-class Product(Base):
-    __tablename__ = "products"
-    id=Column(Integer, primary_key=True)
-    name=Column(String(255), nullable=False)
-    qty=Column(Integer, nullable=False)
-    price=Column(Float, nullable=False)
+    # Mock the API response
+    mock_response = mock_post.return_value
+    mock_response.status_code = 201
+    mock_response.json.return_value = product_data
 
-    def __repr__(self):
-        return f'[id={self.id}, name={self.name}, qty={self.qty}, price={self.price}]'
+    # Call the function under test
+    created_product = repo.create_product(product_data)
 
-    def to_dict(self):
-        return {'id' : self.id,
-                'name' : self.name,
-                'qty' : self.qty, 'price' : self.price}
-
-engine = create_engine("sqlite:///product_app_db.db", echo=True)
-Base.metadata.create_all(engine) # creates tables
-# session for sql operations
-SessionLocal=sessionmaker(bind=engine)
-session=SessionLocal()
-
-def test_create_product():
-    product = Product(id=100, name='Laptop', qty=10, price=50000)
-    created_product = repo.create_product(product)
+    # Assertions to verify correct behavior
     assert created_product['id'] == product.id
     assert created_product['name'] == product.name
     assert created_product['qty'] == product.qty
     assert created_product['price'] == product.price
+
+    # Ensure the POST request was made exactly once
+    mock_post.assert_called_once()

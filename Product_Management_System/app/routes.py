@@ -189,12 +189,12 @@ def update(product_id):
     # send mail
     now = datetime.now()
     date_time_str = now.strftime("%Y-%m-%d %H:%M:%S")
-    subject = f'{date_time_str} Product {product_dict["name"]} Updated.'
+    subject = f'{date_time_str} Product {updated_product["name"]} Updated.'
     mail_body = f'''Product updated successfully
-id: {product_dict["id"]}
-name: {product_dict["name"]}
-qty: {product_dict["qty"]}
-price: {product_dict["price"]}'''
+id: {updated_product["id"]}
+name: {updated_product["name"]}
+qty: {updated_product["qty"]}
+price: {updated_product["price"]}'''
     result = mail.send_gmail(mail.to_address, subject, mail_body)
     print(f'email sent? {result}')
 

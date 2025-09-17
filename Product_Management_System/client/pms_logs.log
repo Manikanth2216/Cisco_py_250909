@@ -917,3 +917,49 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2025-09-17 12:00:08,462 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
 2025-09-17 12:01:14,154 [INFO] Fetched all products.
 2025-09-17 12:01:21,960 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 12:08:28,730 [INFO] Fetched all products.
+2025-09-17 12:08:39,007 [INFO] Fetched product by ID 1000.
+2025-09-17 12:08:46,029 [INFO] Deleted product ID 1000
+2025-09-17 12:09:05,001 [WARNING] Product ID 1000 not found.
+2025-09-17 12:09:18,214 [INFO] Fetched all products.
+2025-09-17 12:09:29,233 [INFO] Fetched product by ID 999.
+2025-09-17 12:09:36,469 [INFO] Deleted product ID 999
+2025-09-17 12:09:49,006 [INFO] Fetched product by ID 700.
+2025-09-17 12:09:56,076 [INFO] Deleted product ID 700
+2025-09-17 12:10:01,798 [INFO] Fetched product by ID 666.
+2025-09-17 12:10:08,804 [INFO] Deleted product ID 666
+2025-09-17 12:10:11,493 [INFO] Fetched all products.
+2025-09-17 12:10:29,305 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 12:10:37,202 [INFO] Fetched all products.
+2025-09-17 12:10:44,597 [INFO] Fetched product by ID 101.
+2025-09-17 12:10:54,324 [WARNING] Product ID 102 not found.
+2025-09-17 12:11:03,935 [INFO] Fetched all products.
+2025-09-17 12:11:12,246 [INFO] Fetched product by ID 101.
+2025-09-17 12:11:19,445 [INFO] Deleted product ID 101
+2025-09-17 12:11:33,657 [INFO] Fetched product by ID 11.
+2025-09-17 12:11:40,669 [INFO] Deleted product ID 11
+2025-09-17 12:11:51,648 [INFO] Fetched product by ID 10.
+2025-09-17 12:11:58,736 [INFO] Deleted product ID 10
+2025-09-17 12:12:01,271 [INFO] Fetched product by ID 9.
+2025-09-17 12:12:08,190 [INFO] Deleted product ID 9
+2025-09-17 12:12:14,313 [INFO] Fetched all products.
+2025-09-17 12:12:22,119 [INFO] Fetched product by ID 4.
+2025-09-17 12:12:26,199 [ERROR] HTTP error during update: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products/4
+2025-09-17 12:12:39,501 [INFO] Fetched all products.
+2025-09-17 12:12:58,569 [WARNING] Product ID 9 not found.
+2025-09-17 12:21:37,380 [INFO] Fetched all products.
+2025-09-17 12:21:44,292 [INFO] Fetched product by ID 4.
+2025-09-17 12:21:47,081 [ERROR] HTTP error during update: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products/4
+2025-09-17 13:46:19,018 [INFO] Fetched all products.
+2025-09-17 13:46:36,186 [INFO] Product created: {'id': 9, 'name': 'frg', 'price': 765.0, 'qty': 67}
+2025-09-17 13:46:49,433 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 13:46:55,978 [INFO] Fetched all products.
+2025-09-17 13:47:32,156 [INFO] Fetched product by ID 9.
+2025-09-17 13:47:44,120 [WARNING] Product ID 99 not found.
+2025-09-17 13:47:49,919 [INFO] Fetched product by ID 9.
+2025-09-17 13:48:00,618 [INFO] Updated product ID 9: {'message': 'Product updated successfully'}
+2025-09-17 13:48:17,686 [WARNING] Product ID 999 not found.
+2025-09-17 13:48:22,092 [INFO] Fetched product by ID 9.
+2025-09-17 13:48:29,160 [INFO] Deleted product ID 9
+2025-09-17 13:48:31,818 [INFO] Fetched all products.
+2025-09-17 13:48:37,605 [WARNING] Product ID 9 not found.

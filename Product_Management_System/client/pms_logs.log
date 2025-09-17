@@ -963,3 +963,7 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2025-09-17 13:48:29,160 [INFO] Deleted product ID 9
 2025-09-17 13:48:31,818 [INFO] Fetched all products.
 2025-09-17 13:48:37,605 [WARNING] Product ID 9 not found.
+2025-09-17 13:56:23,134 [INFO] Product created: {'id': 120, 'name': 'john', 'price': 39.0, 'qty': 78}
+2025-09-17 13:56:35,488 [INFO] Fetched product by ID 120.
+2025-09-17 13:56:42,518 [INFO] Deleted product ID 120
+2025-09-17 13:56:47,072 [INFO] Fetched all products.

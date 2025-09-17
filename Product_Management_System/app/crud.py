@@ -41,7 +41,7 @@ def update(id, new_product):
     if not product:
         return
     product.price=new_product['price']
-    db.session.commit()   
+    db.session.commit()  
 def delete_product(id):
     """
     Delete a product from the database.

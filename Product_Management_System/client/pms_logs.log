@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2025-09-17 13:56:16,193 [INFO] Fetched all products.
 2025-09-17 13:56:52,212 [INFO] Product created: {'id': 7, 'name': 'erg', 'price': 4.0, 'qty': 54}
 2025-09-17 13:57:17,989 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
@@ -9,3 +10,984 @@
 2025-09-17 13:58:37,980 [INFO] Fetched product by ID 7.
 2025-09-17 13:58:44,947 [INFO] Deleted product ID 7
 2025-09-17 13:58:54,405 [WARNING] Product ID 567 not found.
+=======
+<<<<<<< HEAD
+2025-09-17 11:02:35,228 [INFO] Read all products.
+2025-09-17 11:02:56,862 [ERROR] Failed to create product. Status code: 500, Response: <!doctype html>
+<html lang=en>
+  <head>
+    <title>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: products.id
+[SQL: INSERT INTO products (id, name, qty, price) VALUES (?, ?, ?, ?)]
+[parameters: (9, &#39;wdfg&#39;, 54, 34.0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+ // Werkzeug Debugger</title>
+    <link rel="stylesheet" href="?__debugger__=yes&amp;cmd=resource&amp;f=style.css">
+    <link rel="shortcut icon"
+        href="?__debugger__=yes&amp;cmd=resource&amp;f=console.png">
+    <script src="?__debugger__=yes&amp;cmd=resource&amp;f=debugger.js"></script>
+    <script>
+      var CONSOLE_MODE = false,
+          EVALEX = true,
+          EVALEX_TRUSTED = false,
+          SECRET = "NljrMw5LsSfUyF5839N8";
+    </script>
+  </head>
+  <body style="background-color: #fff">
+    <div class="debugger">
+<h1>sqlalchemy.exc.IntegrityError</h1>
+<div class="detail">
+  <p class="errormsg">sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: products.id
+[SQL: INSERT INTO products (id, name, qty, price) VALUES (?, ?, ?, ?)]
+[parameters: (9, &#39;wdfg&#39;, 54, 34.0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+</p>
+</div>
+<h2 class="traceback">Traceback <em>(most recent call last)</em></h2>
+<div class="traceback">
+  <h3></h3>
+  <ul><li><div class="frame" id="frame-4376344544">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1967</em>,
+      in <code class="function">_exec_single_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                            </span>context,</pre>
+<pre class="line before"><span class="ws">                        </span>):</pre>
+<pre class="line before"><span class="ws">                            </span>evt_handled = True</pre>
+<pre class="line before"><span class="ws">                            </span>break</pre>
+<pre class="line before"><span class="ws">                </span>if not evt_handled:</pre>
+<pre class="line current"><span class="ws">                    </span>self.dialect.do_execute(
+<span class="ws">                    </span>^</pre>
+<pre class="line after"><span class="ws">                        </span>cursor, str_statement, effective_parameters, context</pre>
+<pre class="line after"><span class="ws">                    </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">            </span>if self._has_events or self.engine._has_events:</pre>
+<pre class="line after"><span class="ws">                </span>self.dispatch.after_cursor_execute(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377250048">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/default.py"</cite>,
+      line <em class="line">951</em>,
+      in <code class="function">do_execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_executemany(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line before"><span class="ws">        </span>cursor.executemany(statement, parameters)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_execute(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line current"><span class="ws">        </span>cursor.execute(statement, parameters)
+<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def do_execute_no_params(self, cursor, statement, context=None):</pre>
+<pre class="line after"><span class="ws">        </span>cursor.execute(statement)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def is_disconnect(</pre></div>
+</div>
+
+<li><div class="exc-divider">The above exception was the direct cause of the following exception:</div>
+<li><div class="frame" id="frame-4376344704">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py"</cite>,
+      line <em class="line">1536</em>,
+      in <code class="function">__call__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">    </span>) -&gt; cabc.Iterable[bytes]:</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;The WSGI server calls the Flask application object as the</pre>
+<pre class="line before"><span class="ws">        </span>WSGI application. This calls :meth:`wsgi_app`, which can be</pre>
+<pre class="line before"><span class="ws">        </span>wrapped to apply middleware.</pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line current"><span class="ws">        </span>return self.wsgi_app(environ, start_response)
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376340064">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py"</cite>,
+      line <em class="line">1514</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line before"><span class="ws">                </span>response = self.full_dispatch_request()</pre>
+<pre class="line before"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line before"><span class="ws">                </span>error = e</pre>
+<pre class="line current"><span class="ws">                </span>response = self.handle_exception(e)
+<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>return response(environ, start_response)</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376344864">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py"</cite>,
+      line <em class="line">1511</em>,
+      in <code class="function">wsgi_app</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>ctx = self.request_context(environ)</pre>
+<pre class="line before"><span class="ws">        </span>error: BaseException | None = None</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line before"><span class="ws">                </span>ctx.push()</pre>
+<pre class="line current"><span class="ws">                </span>response = self.full_dispatch_request()
+<span class="ws">                </span>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">                </span>error = e</pre>
+<pre class="line after"><span class="ws">                </span>response = self.handle_exception(e)</pre>
+<pre class="line after"><span class="ws">            </span>except:  # noqa: B001</pre>
+<pre class="line after"><span class="ws">                </span>error = sys.exc_info()[1]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376345184">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py"</cite>,
+      line <em class="line">919</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line before"><span class="ws">                </span>rv = self.dispatch_request()</pre>
+<pre class="line before"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line current"><span class="ws">            </span>rv = self.handle_user_exception(e)
+<span class="ws">            </span>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>rv: ft.ResponseReturnValue | HTTPException,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376345344">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py"</cite>,
+      line <em class="line">917</em>,
+      in <code class="function">full_dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>request_started.send(self, _async_wrapper=self.ensure_sync)</pre>
+<pre class="line before"><span class="ws">            </span>rv = self.preprocess_request()</pre>
+<pre class="line before"><span class="ws">            </span>if rv is None:</pre>
+<pre class="line current"><span class="ws">                </span>rv = self.dispatch_request()
+<span class="ws">                </span>     ^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>except Exception as e:</pre>
+<pre class="line after"><span class="ws">            </span>rv = self.handle_user_exception(e)</pre>
+<pre class="line after"><span class="ws">        </span>return self.finalize_request(rv)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_request(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376345504">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py"</cite>,
+      line <em class="line">902</em>,
+      in <code class="function">dispatch_request</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>and req.method == &#34;OPTIONS&#34;</pre>
+<pre class="line before"><span class="ws">        </span>):</pre>
+<pre class="line before"><span class="ws">            </span>return self.make_default_options_response()</pre>
+<pre class="line before"><span class="ws">        </span># otherwise dispatch to the handler for that endpoint</pre>
+<pre class="line before"><span class="ws">        </span>view_args: dict[str, t.Any] = req.view_args  # type: ignore[assignment]</pre>
+<pre class="line current"><span class="ws">        </span>return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def full_dispatch_request(self) -&gt; Response:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Dispatches the request and on top of that performs request</pre>
+<pre class="line after"><span class="ws">        </span>pre and postprocessing as well as HTTP exception catching and</pre>
+<pre class="line after"><span class="ws">        </span>error handling.</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376345664">
+  <h4>File <cite class="filename">"/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/routes.py"</cite>,
+      line <em class="line">21</em>,
+      in <code class="function">create</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">    </span>crud.db.create_all()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span>@application.route(&#34;/products&#34;,methods=[&#39;POST&#39;])</pre>
+<pre class="line before"><span class="ws"></span>def create():</pre>
+<pre class="line before"><span class="ws">    </span>product_dict = request.json</pre>
+<pre class="line current"><span class="ws">    </span>crud.create_product(product_dict)
+<span class="ws">    </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">    </span>prod_id=product_dict[&#39;id&#39;]</pre>
+<pre class="line after"><span class="ws">    </span>savedProduct_dict = crud.read_by_id(prod_id)</pre>
+<pre class="line after"><span class="ws">    </span># send the mail</pre>
+<pre class="line after"><span class="ws">    </span>now=datetime.now()</pre>
+<pre class="line after"><span class="ws">    </span>date_time_str = now.strftime(&#34;%Y-%m-%d %H:%M:%S&#34;)</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376342944">
+  <h4>File <cite class="filename">"/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/crud.py"</cite>,
+      line <em class="line">12</em>,
+      in <code class="function">create_product</code></h4>
+  <div class="source "><pre class="line before"><span class="ws">        </span>id=product[&#39;id&#39;],</pre>
+<pre class="line before"><span class="ws">        </span>name=product[&#39;name&#39;],</pre>
+<pre class="line before"><span class="ws">        </span>qty=product[&#39;qty&#39;],</pre>
+<pre class="line before"><span class="ws">        </span>price=product[&#39;price&#39;])</pre>
+<pre class="line before"><span class="ws">    </span>db.session.add(product_model)</pre>
+<pre class="line current"><span class="ws">    </span>db.session.commit()
+<span class="ws">    </span>^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws"></span>def read_all_products():</pre>
+<pre class="line after"><span class="ws">    </span>&#34;&#34;&#34;Read all products from the database.&#34;&#34;&#34;</pre>
+<pre class="line after"><span class="ws">    </span>products=db.session.query(Product).all()</pre>
+<pre class="line after"><span class="ws">    </span>dict_products=[]</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376343104">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/scoping.py"</cite>,
+      line <em class="line">599</em>,
+      in <code class="function">commit</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>:ref:`asyncio_orm_avoid_lazyloads`</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;  # noqa: E501</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line current"><span class="ws">        </span>return self._proxied.commit()
+<span class="ws">        </span>       ^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def connection(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>bind_arguments: Optional[_BindArguments] = None,</pre>
+<pre class="line after"><span class="ws">        </span>execution_options: Optional[CoreExecuteOptionsParameter] = None,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376343264">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">2032</em>,
+      in <code class="function">commit</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>&#34;&#34;&#34;</pre>
+<pre class="line before"><span class="ws">        </span>trans = self._transaction</pre>
+<pre class="line before"><span class="ws">        </span>if trans is None:</pre>
+<pre class="line before"><span class="ws">            </span>trans = self._autobegin_t()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line current"><span class="ws">        </span>trans.commit(_to_root=True)
+<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def prepare(self) -&gt; None:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Prepare the current transaction in progress for two phase commit.</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>If no transaction is in progress, this method raises an</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376343424">
+  <h4>File <cite class="filename">"&lt;string&gt;"</cite>,
+      line <em class="line">2</em>,
+      in <code class="function">commit</code></h4>
+  <div class="source "></div>
+</div>
+
+<li><div class="frame" id="frame-4376345984">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py"</cite>,
+      line <em class="line">137</em>,
+      in <code class="function">_go</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                    </span>)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>self._current_fn = fn</pre>
+<pre class="line before"><span class="ws">            </span>self._next_state = _StateChangeStates.CHANGE_IN_PROGRESS</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line current"><span class="ws">                </span>ret_value = fn(self, *arg, **kw)
+<span class="ws">                </span>            ^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except:</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>else:</pre>
+<pre class="line after"><span class="ws">                </span>if self._state is expect_state:</pre>
+<pre class="line after"><span class="ws">                    </span>return ret_value</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376343584">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">1313</em>,
+      in <code class="function">commit</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>SessionTransactionState.CLOSED,</pre>
+<pre class="line before"><span class="ws">    </span>)</pre>
+<pre class="line before"><span class="ws">    </span>def commit(self, _to_root: bool = False) -&gt; None:</pre>
+<pre class="line before"><span class="ws">        </span>if self._state is not SessionTransactionState.PREPARED:</pre>
+<pre class="line before"><span class="ws">            </span>with self._expect_state(SessionTransactionState.PREPARED):</pre>
+<pre class="line current"><span class="ws">                </span>self._prepare_impl()
+<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>if self._parent is None or self.nested:</pre>
+<pre class="line after"><span class="ws">            </span>for conn, trans, should_commit, autoclose in set(</pre>
+<pre class="line after"><span class="ws">                </span>self._connections.values()</pre>
+<pre class="line after"><span class="ws">            </span>):</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376346304">
+  <h4>File <cite class="filename">"&lt;string&gt;"</cite>,
+      line <em class="line">2</em>,
+      in <code class="function">_prepare_impl</code></h4>
+  <div class="source "></div>
+</div>
+
+<li><div class="frame" id="frame-4376346144">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py"</cite>,
+      line <em class="line">137</em>,
+      in <code class="function">_go</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                    </span>)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>self._current_fn = fn</pre>
+<pre class="line before"><span class="ws">            </span>self._next_state = _StateChangeStates.CHANGE_IN_PROGRESS</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line current"><span class="ws">                </span>ret_value = fn(self, *arg, **kw)
+<span class="ws">                </span>            ^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>except:</pre>
+<pre class="line after"><span class="ws">                </span>raise</pre>
+<pre class="line after"><span class="ws">            </span>else:</pre>
+<pre class="line after"><span class="ws">                </span>if self._state is expect_state:</pre>
+<pre class="line after"><span class="ws">                    </span>return ret_value</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376346464">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">1288</em>,
+      in <code class="function">_prepare_impl</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>if not self.session._flushing:</pre>
+<pre class="line before"><span class="ws">            </span>for _flush_guard in range(100):</pre>
+<pre class="line before"><span class="ws">                </span>if self.session._is_clean():</pre>
+<pre class="line before"><span class="ws">                    </span>break</pre>
+<pre class="line current"><span class="ws">                </span>self.session.flush()
+<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>else:</pre>
+<pre class="line after"><span class="ws">                </span>raise exc.FlushError(</pre>
+<pre class="line after"><span class="ws">                    </span>&#34;Over 100 subsequent flushes have occurred within &#34;</pre>
+<pre class="line after"><span class="ws">                    </span>&#34;session.commit() - is an after_flush() hook &#34;</pre>
+<pre class="line after"><span class="ws">                    </span>&#34;creating new objects?&#34;</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377247808">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">4345</em>,
+      in <code class="function">flush</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>if self._is_clean():</pre>
+<pre class="line before"><span class="ws">            </span>return</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>self._flushing = True</pre>
+<pre class="line current"><span class="ws">            </span>self._flush(objects)
+<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre>
+<pre class="line after"><span class="ws">            </span>self._flushing = False</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def _flush_warning(self, method: Any) -&gt; None:</pre>
+<pre class="line after"><span class="ws">        </span>util.warn(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377247968">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">4480</em>,
+      in <code class="function">_flush</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>self.dispatch.after_flush_postexec(self, flush_context)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>transaction.commit()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>except:</pre>
+<pre class="line current"><span class="ws">            </span>with util.safe_reraise():
+<span class="ws">            </span>     ^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">                </span>transaction.rollback(_capture_exception=True)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def bulk_save_objects(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre>
+<pre class="line after"><span class="ws">        </span>objects: Iterable[object],</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377248128">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py"</cite>,
+      line <em class="line">224</em>,
+      in <code class="function">__exit__</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span># see #2703 for notes</pre>
+<pre class="line before"><span class="ws">        </span>if type_ is None:</pre>
+<pre class="line before"><span class="ws">            </span>exc_type, exc_value, exc_tb = self._exc_info</pre>
+<pre class="line before"><span class="ws">            </span>assert exc_value is not None</pre>
+<pre class="line before"><span class="ws">            </span>self._exc_info = None  # remove potential circular references</pre>
+<pre class="line current"><span class="ws">            </span>raise exc_value.with_traceback(exc_tb)
+<span class="ws">            </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">        </span>else:</pre>
+<pre class="line after"><span class="ws">            </span>self._exc_info = None  # remove potential circular references</pre>
+<pre class="line after"><span class="ws">            </span>assert value is not None</pre>
+<pre class="line after"><span class="ws">            </span>raise value.with_traceback(traceback)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376343744">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py"</cite>,
+      line <em class="line">4441</em>,
+      in <code class="function">_flush</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>flush_context.transaction = transaction = self._autobegin_t()._begin()</pre>
+<pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>self._warn_on_events = True</pre>
+<pre class="line before"><span class="ws">            </span>try:</pre>
+<pre class="line current"><span class="ws">                </span>flush_context.execute()
+<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>finally:</pre>
+<pre class="line after"><span class="ws">                </span>self._warn_on_events = False</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">            </span>self.dispatch.after_flush(self, flush_context)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377248448">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py"</cite>,
+      line <em class="line">466</em>,
+      in <code class="function">execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                </span>while set_:</pre>
+<pre class="line before"><span class="ws">                    </span>n = set_.pop()</pre>
+<pre class="line before"><span class="ws">                    </span>n.execute_aggregate(self, set_)</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line before"><span class="ws">            </span>for rec in topological.sort(self.dependencies, postsort_actions):</pre>
+<pre class="line current"><span class="ws">                </span>rec.execute(self)
+<span class="ws">                </span>^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def finalize_flush_changes(self) -&gt; None:</pre>
+<pre class="line after"><span class="ws">        </span>&#34;&#34;&#34;Mark processed objects as clean / deleted after a successful</pre>
+<pre class="line after"><span class="ws">        </span>flush().</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376343904">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py"</cite>,
+      line <em class="line">642</em>,
+      in <code class="function">execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>self.sort_key = (&#34;SaveUpdateAll&#34;, mapper._sort_key)</pre>
+<pre class="line before"><span class="ws">        </span>assert mapper is mapper.base_mapper</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>@util.preload_module(&#34;sqlalchemy.orm.persistence&#34;)</pre>
+<pre class="line before"><span class="ws">    </span>def execute(self, uow):</pre>
+<pre class="line current"><span class="ws">        </span>util.preloaded.orm_persistence.save_obj(
+<span class="ws">        </span>^</pre>
+<pre class="line after"><span class="ws">            </span>self.mapper,</pre>
+<pre class="line after"><span class="ws">            </span>uow.states_for_mapper_hierarchy(self.mapper, False, False),</pre>
+<pre class="line after"><span class="ws">            </span>uow,</pre>
+<pre class="line after"><span class="ws">        </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377248608">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py"</cite>,
+      line <em class="line">93</em>,
+      in <code class="function">save_obj</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>mapper,</pre>
+<pre class="line before"><span class="ws">            </span>table,</pre>
+<pre class="line before"><span class="ws">            </span>update,</pre>
+<pre class="line before"><span class="ws">        </span>)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line current"><span class="ws">        </span>_emit_insert_statements(
+<span class="ws">        </span>^</pre>
+<pre class="line after"><span class="ws">            </span>base_mapper,</pre>
+<pre class="line after"><span class="ws">            </span>uowtransaction,</pre>
+<pre class="line after"><span class="ws">            </span>mapper,</pre>
+<pre class="line after"><span class="ws">            </span>table,</pre>
+<pre class="line after"><span class="ws">            </span>insert,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376344064">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py"</cite>,
+      line <em class="line">1048</em>,
+      in <code class="function">_emit_insert_statements</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span># to fetch them, or the dialect doesn&#39;t support RETURNING at all</pre>
+<pre class="line before"><span class="ws">            </span># so we have to post-fetch / use lastrowid anyway.</pre>
+<pre class="line before"><span class="ws">            </span>records = list(records)</pre>
+<pre class="line before"><span class="ws">            </span>multiparams = [rec[2] for rec in records]</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line current"><span class="ws">            </span>result = connection.execute(
+<span class="ws">            </span>         </pre>
+<pre class="line after"><span class="ws">                </span>statement, multiparams, execution_options=execution_options</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws">            </span>if bookkeeping:</pre>
+<pre class="line after"><span class="ws">                </span>for (</pre>
+<pre class="line after"><span class="ws">                    </span>(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377248288">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1419</em>,
+      in <code class="function">execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>try:</pre>
+<pre class="line before"><span class="ws">            </span>meth = statement._execute_on_connection</pre>
+<pre class="line before"><span class="ws">        </span>except AttributeError as err:</pre>
+<pre class="line before"><span class="ws">            </span>raise exc.ObjectNotExecutableError(statement) from err</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line current"><span class="ws">            </span>return meth(
+<span class="ws">            </span>       </pre>
+<pre class="line after"><span class="ws">                </span>self,</pre>
+<pre class="line after"><span class="ws">                </span>distilled_parameters,</pre>
+<pre class="line after"><span class="ws">                </span>execution_options or NO_OPTIONS,</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376344224">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/sql/elements.py"</cite>,
+      line <em class="line">526</em>,
+      in <code class="function">_execute_on_connection</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>execution_options: CoreExecuteOptionsParameter,</pre>
+<pre class="line before"><span class="ws">    </span>) -&gt; Result[Any]:</pre>
+<pre class="line before"><span class="ws">        </span>if self.supports_execution:</pre>
+<pre class="line before"><span class="ws">            </span>if TYPE_CHECKING:</pre>
+<pre class="line before"><span class="ws">                </span>assert isinstance(self, Executable)</pre>
+<pre class="line current"><span class="ws">            </span>return connection._execute_clauseelement(
+<span class="ws">            </span>       </pre>
+<pre class="line after"><span class="ws">                </span>self, distilled_params, execution_options</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws">        </span>else:</pre>
+<pre class="line after"><span class="ws">            </span>raise exc.ObjectNotExecutableError(self)</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4376344384">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1641</em>,
+      in <code class="function">_execute_clauseelement</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>column_keys=keys,</pre>
+<pre class="line before"><span class="ws">            </span>for_executemany=for_executemany,</pre>
+<pre class="line before"><span class="ws">            </span>schema_translate_map=schema_translate_map,</pre>
+<pre class="line before"><span class="ws">            </span>linting=self.dialect.compiler_linting | compiler.WARN_LINTING,</pre>
+<pre class="line before"><span class="ws">        </span>)</pre>
+<pre class="line current"><span class="ws">        </span>ret = self._execute_context(
+<span class="ws">        </span>      </pre>
+<pre class="line after"><span class="ws">            </span>dialect,</pre>
+<pre class="line after"><span class="ws">            </span>dialect.execution_ctx_cls._init_compiled,</pre>
+<pre class="line after"><span class="ws">            </span>compiled_sql,</pre>
+<pre class="line after"><span class="ws">            </span>distilled_parameters,</pre>
+<pre class="line after"><span class="ws">            </span>execution_options,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377248928">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1846</em>,
+      in <code class="function">_execute_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">        </span>context.pre_exec()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>if context.execute_style is ExecuteStyle.INSERTMANYVALUES:</pre>
+<pre class="line before"><span class="ws">            </span>return self._exec_insertmany_context(dialect, context)</pre>
+<pre class="line before"><span class="ws">        </span>else:</pre>
+<pre class="line current"><span class="ws">            </span>return self._exec_single_context(
+<span class="ws">            </span>       </pre>
+<pre class="line after"><span class="ws">                </span>dialect, context, statement, parameters</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def _exec_single_context(</pre>
+<pre class="line after"><span class="ws">        </span>self,</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377249088">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1986</em>,
+      in <code class="function">_exec_single_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">            </span>context.post_exec()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>result = context._setup_result_proxy()</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">        </span>except BaseException as e:</pre>
+<pre class="line current"><span class="ws">            </span>self._handle_dbapi_exception(
+<span class="ws">            </span>^</pre>
+<pre class="line after"><span class="ws">                </span>e, str_statement, effective_parameters, cursor, context</pre>
+<pre class="line after"><span class="ws">            </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">        </span>return result</pre>
+<pre class="line after"><span class="ws"></span> </pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377249248">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">2355</em>,
+      in <code class="function">_handle_dbapi_exception</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">            </span>if newraise:</pre>
+<pre class="line before"><span class="ws">                </span>raise newraise.with_traceback(exc_info[2]) from e</pre>
+<pre class="line before"><span class="ws">            </span>elif should_wrap:</pre>
+<pre class="line before"><span class="ws">                </span>assert sqlalchemy_exception is not None</pre>
+<pre class="line current"><span class="ws">                </span>raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+<span class="ws">                </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws">            </span>else:</pre>
+<pre class="line after"><span class="ws">                </span>assert exc_info[1] is not None</pre>
+<pre class="line after"><span class="ws">                </span>raise exc_info[1].with_traceback(exc_info[2])</pre>
+<pre class="line after"><span class="ws">        </span>finally:</pre>
+<pre class="line after"><span class="ws">            </span>del self._reentrant_error</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377249408">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py"</cite>,
+      line <em class="line">1967</em>,
+      in <code class="function">_exec_single_context</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws">                            </span>context,</pre>
+<pre class="line before"><span class="ws">                        </span>):</pre>
+<pre class="line before"><span class="ws">                            </span>evt_handled = True</pre>
+<pre class="line before"><span class="ws">                            </span>break</pre>
+<pre class="line before"><span class="ws">                </span>if not evt_handled:</pre>
+<pre class="line current"><span class="ws">                    </span>self.dialect.do_execute(
+<span class="ws">                    </span>^</pre>
+<pre class="line after"><span class="ws">                        </span>cursor, str_statement, effective_parameters, context</pre>
+<pre class="line after"><span class="ws">                    </span>)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">            </span>if self._has_events or self.engine._has_events:</pre>
+<pre class="line after"><span class="ws">                </span>self.dispatch.after_cursor_execute(</pre></div>
+</div>
+
+<li><div class="frame" id="frame-4377249568">
+  <h4>File <cite class="filename">"/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/default.py"</cite>,
+      line <em class="line">951</em>,
+      in <code class="function">do_execute</code></h4>
+  <div class="source library"><pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_executemany(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line before"><span class="ws">        </span>cursor.executemany(statement, parameters)</pre>
+<pre class="line before"><span class="ws"></span> </pre>
+<pre class="line before"><span class="ws">    </span>def do_execute(self, cursor, statement, parameters, context=None):</pre>
+<pre class="line current"><span class="ws">        </span>cursor.execute(statement, parameters)
+<span class="ws">        </span>^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def do_execute_no_params(self, cursor, statement, context=None):</pre>
+<pre class="line after"><span class="ws">        </span>cursor.execute(statement)</pre>
+<pre class="line after"><span class="ws"></span> </pre>
+<pre class="line after"><span class="ws">    </span>def is_disconnect(</pre></div>
+</div>
+</ul>
+  <blockquote>sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: products.id
+[SQL: INSERT INTO products (id, name, qty, price) VALUES (?, ?, ?, ?)]
+[parameters: (9, &#39;wdfg&#39;, 54, 34.0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+</blockquote>
+</div>
+
+<div class="plain">
+    <p>
+      This is the Copy/Paste friendly version of the traceback.
+    </p>
+    <textarea cols="50" rows="10" name="code" readonly>Traceback (most recent call last):
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py&#34;, line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/default.py&#34;, line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: products.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py&#34;, line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py&#34;, line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py&#34;, line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py&#34;, line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py&#34;, line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py&#34;, line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File &#34;/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/routes.py&#34;, line 21, in create
+    crud.create_product(product_dict)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File &#34;/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/crud.py&#34;, line 12, in create_product
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/scoping.py&#34;, line 599, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py&#34;, line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File &#34;&lt;string&gt;&#34;, line 2, in commit
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py&#34;, line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py&#34;, line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File &#34;&lt;string&gt;&#34;, line 2, in _prepare_impl
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py&#34;, line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py&#34;, line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py&#34;, line 4345, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py&#34;, line 4480, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py&#34;, line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py&#34;, line 4441, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py&#34;, line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py&#34;, line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py&#34;, line 93, in save_obj
+    _emit_insert_statements(
+    ^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py&#34;, line 1048, in _emit_insert_statements
+    result = connection.execute(
+    
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py&#34;, line 1419, in execute
+    return meth(
+    
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/sql/elements.py&#34;, line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+    
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py&#34;, line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+    
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py&#34;, line 1846, in _execute_context
+    return self._exec_single_context(
+    
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py&#34;, line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py&#34;, line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py&#34;, line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ^
+  File &#34;/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/default.py&#34;, line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: products.id
+[SQL: INSERT INTO products (id, name, qty, price) VALUES (?, ?, ?, ?)]
+[parameters: (9, &#39;wdfg&#39;, 54, 34.0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+</textarea>
+</div>
+<div class="explanation">
+  The debugger caught an exception in your WSGI application.  You can now
+  look at the traceback which led to the error.  <span class="nojavascript">
+  If you enable JavaScript you can also use additional features such as code
+  execution (if the evalex feature is enabled), automatic pasting of the
+  exceptions and much more.</span>
+</div>
+      <div class="footer">
+        Brought to you by <strong class="arthur">DON'T PANIC</strong>, your
+        friendly Werkzeug powered traceback interpreter.
+      </div>
+    </div>
+
+    <div class="pin-prompt">
+      <div class="inner">
+        <h3>Console Locked</h3>
+        <p>
+          The console is locked and needs to be unlocked by entering the PIN.
+          You can find the PIN printed out on the standard output of your
+          shell that runs the server.
+        <form>
+          <p>PIN:
+            <input type=text name=pin size=14>
+            <input type=submit name=btn value="Confirm Pin">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!--
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: products.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/routes.py", line 21, in create
+    crud.create_product(product_dict)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Users/mmadisha/Cisco_py_250909/Product_Management_System/app/crud.py", line 12, in create_product
+    db.session.commit()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/scoping.py", line 599, in commit
+    return self._proxied.commit()
+           ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 2032, in commit
+    trans.commit(_to_root=True)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "<string>", line 2, in commit
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "<string>", line 2, in _prepare_impl
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4345, in flush
+    self._flush(objects)
+    ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4480, in _flush
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/session.py", line 4441, in _flush
+    flush_context.execute()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+    ~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+    
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+    
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/sql/elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+    
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+    
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+    
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sqlalchemy/engine/default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: products.id
+[SQL: INSERT INTO products (id, name, qty, price) VALUES (?, ?, ?, ?)]
+[parameters: (9, 'wdfg', 54, 34.0)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+
+-->
+
+2025-09-17 11:02:56,862 [ERROR] Request error while creating product: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 11:03:27,520 [ERROR] Failed to create product. Status code: 200, Response: {
+  "id": 999,
+  "name": "hgf",
+  "price": 65.0,
+  "qty": 54
+}
+
+2025-09-17 11:03:27,520 [INFO] Product created.
+2025-09-17 11:03:36,890 [INFO] Read all products.
+2025-09-17 11:03:44,374 [INFO] Read product by ID.
+2025-09-17 11:07:06,991 [INFO] Read all products.
+2025-09-17 11:07:27,828 [ERROR] Failed to create product. Status code: 200, Response: {
+  "id": 1000,
+  "name": "dfg",
+  "price": 65.0,
+  "qty": 4765
+}
+
+2025-09-17 11:07:27,829 [INFO] Product created.
+2025-09-17 11:07:29,992 [INFO] Read all products.
+2025-09-17 11:07:41,004 [INFO] Read product by ID.
+2025-09-17 11:07:52,925 [INFO] Read product by ID.
+2025-09-17 11:08:00,544 [ERROR] HTTP error in Updating Product by ID: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products/1000
+2025-09-17 11:10:42,658 [INFO] Read all products.
+2025-09-17 11:11:06,051 [INFO] Product created.
+2025-09-17 11:11:09,743 [INFO] Read all products.
+2025-09-17 11:11:16,939 [INFO] Read product by ID.
+2025-09-17 11:11:23,621 [INFO] Read product by ID.
+2025-09-17 11:14:53,359 [INFO] Read all products.
+2025-09-17 11:15:22,126 [INFO] Read all products.
+2025-09-17 11:15:28,766 [INFO] Read product by ID.
+2025-09-17 11:15:35,926 [INFO] Deleted product by ID.
+2025-09-17 11:16:09,352 [INFO] Read product by ID.
+2025-09-17 11:16:16,278 [INFO] Deleted product by ID.
+2025-09-17 11:18:46,189 [INFO] Read product by ID.
+2025-09-17 11:19:37,407 [INFO] Read product by ID.
+2025-09-17 11:20:12,834 [INFO] Read product by ID.
+2025-09-17 11:20:26,227 [INFO] Read all products.
+2025-09-17 11:21:46,086 [INFO] Read all products.
+2025-09-17 11:21:52,916 [INFO] Read product by ID.
+2025-09-17 11:25:48,807 [INFO] Read all products.
+2025-09-17 11:29:34,380 [INFO] Read product by ID.
+2025-09-17 11:29:47,982 [INFO] Read all products.
+2025-09-17 11:32:51,329 [INFO] Read all products.
+2025-09-17 11:33:02,762 [INFO] Read product by ID.
+2025-09-17 11:59:54,641 [INFO] Product created: {'id': 666, 'name': 'dfg', 'price': 345.0, 'qty': 54}
+2025-09-17 11:59:59,284 [INFO] Fetched all products.
+2025-09-17 12:00:08,462 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 12:01:14,154 [INFO] Fetched all products.
+2025-09-17 12:01:21,960 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 12:08:28,730 [INFO] Fetched all products.
+2025-09-17 12:08:39,007 [INFO] Fetched product by ID 1000.
+2025-09-17 12:08:46,029 [INFO] Deleted product ID 1000
+2025-09-17 12:09:05,001 [WARNING] Product ID 1000 not found.
+2025-09-17 12:09:18,214 [INFO] Fetched all products.
+2025-09-17 12:09:29,233 [INFO] Fetched product by ID 999.
+2025-09-17 12:09:36,469 [INFO] Deleted product ID 999
+2025-09-17 12:09:49,006 [INFO] Fetched product by ID 700.
+2025-09-17 12:09:56,076 [INFO] Deleted product ID 700
+2025-09-17 12:10:01,798 [INFO] Fetched product by ID 666.
+2025-09-17 12:10:08,804 [INFO] Deleted product ID 666
+2025-09-17 12:10:11,493 [INFO] Fetched all products.
+2025-09-17 12:10:29,305 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 12:10:37,202 [INFO] Fetched all products.
+2025-09-17 12:10:44,597 [INFO] Fetched product by ID 101.
+2025-09-17 12:10:54,324 [WARNING] Product ID 102 not found.
+2025-09-17 12:11:03,935 [INFO] Fetched all products.
+2025-09-17 12:11:12,246 [INFO] Fetched product by ID 101.
+2025-09-17 12:11:19,445 [INFO] Deleted product ID 101
+2025-09-17 12:11:33,657 [INFO] Fetched product by ID 11.
+2025-09-17 12:11:40,669 [INFO] Deleted product ID 11
+2025-09-17 12:11:51,648 [INFO] Fetched product by ID 10.
+2025-09-17 12:11:58,736 [INFO] Deleted product ID 10
+2025-09-17 12:12:01,271 [INFO] Fetched product by ID 9.
+2025-09-17 12:12:08,190 [INFO] Deleted product ID 9
+2025-09-17 12:12:14,313 [INFO] Fetched all products.
+2025-09-17 12:12:22,119 [INFO] Fetched product by ID 4.
+2025-09-17 12:12:26,199 [ERROR] HTTP error during update: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products/4
+2025-09-17 12:12:39,501 [INFO] Fetched all products.
+2025-09-17 12:12:58,569 [WARNING] Product ID 9 not found.
+2025-09-17 12:21:37,380 [INFO] Fetched all products.
+2025-09-17 12:21:44,292 [INFO] Fetched product by ID 4.
+2025-09-17 12:21:47,081 [ERROR] HTTP error during update: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products/4
+2025-09-17 13:46:19,018 [INFO] Fetched all products.
+2025-09-17 13:46:36,186 [INFO] Product created: {'id': 9, 'name': 'frg', 'price': 765.0, 'qty': 67}
+2025-09-17 13:46:49,433 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 13:46:55,978 [INFO] Fetched all products.
+2025-09-17 13:47:32,156 [INFO] Fetched product by ID 9.
+2025-09-17 13:47:44,120 [WARNING] Product ID 99 not found.
+2025-09-17 13:47:49,919 [INFO] Fetched product by ID 9.
+2025-09-17 13:48:00,618 [INFO] Updated product ID 9: {'message': 'Product updated successfully'}
+2025-09-17 13:48:17,686 [WARNING] Product ID 999 not found.
+2025-09-17 13:48:22,092 [INFO] Fetched product by ID 9.
+2025-09-17 13:48:29,160 [INFO] Deleted product ID 9
+2025-09-17 13:48:31,818 [INFO] Fetched all products.
+2025-09-17 13:48:37,605 [WARNING] Product ID 9 not found.
+<<<<<<< HEAD
+2025-09-17 13:55:27,408 [INFO] Fetched all products.
+2025-09-17 13:56:03,675 [INFO] Fetched product by ID 101.
+2025-09-17 13:56:23,693 [INFO] Fetched product by ID 101.
+2025-09-17 13:56:27,115 [INFO] Deleted product ID 101
+=======
+2025-09-17 13:56:23,134 [INFO] Product created: {'id': 120, 'name': 'john', 'price': 39.0, 'qty': 78}
+2025-09-17 13:56:35,488 [INFO] Fetched product by ID 120.
+2025-09-17 13:56:42,518 [INFO] Deleted product ID 120
+2025-09-17 13:56:47,072 [INFO] Fetched all products.
+=======
+>>>>>>> 124dcb102cba3b072fb29729ddca7058645efe4d
+>>>>>>> 9759cf842f709ae20aae0cc95107769e6edc63ee
+>>>>>>> 7b3e258f889d0a41f7995a630ca02b94e968ef84

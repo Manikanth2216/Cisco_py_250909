@@ -1,3 +1,6 @@
+"""
+Unit tests for batch calculation functions in Product Management System.
+"""
 import pytest
 from app import create_app
 from app.models import db, Product
@@ -6,7 +9,13 @@ from app.batch_calc import total_stock_threaded, total_stock_asyncio, total_stoc
 
 @pytest.fixture()
 def app():
+    """
+    Fixture to create a test Flask app and seed the database.
+    """
     class TestConfig:
+        """
+        Test configuration for Flask app.
+        """
         SQLALCHEMY_DATABASE_URI = "sqlite://"
         SQLALCHEMY_TRACK_MODIFICATIONS = False
         TESTING = True
@@ -30,6 +39,9 @@ def app():
 
 
 def test_totals(app):
+    """
+    Test the total stock calculation functions.
+    """
     with app.app_context():
         t1 = total_stock_threaded(batch_size=10)
         t2 = total_stock_asyncio(batch_size=10)

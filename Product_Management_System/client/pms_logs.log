@@ -912,3 +912,8 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 2025-09-17 11:29:47,982 [INFO] Read all products.
 2025-09-17 11:32:51,329 [INFO] Read all products.
 2025-09-17 11:33:02,762 [INFO] Read product by ID.
+2025-09-17 11:59:54,641 [INFO] Product created: {'id': 666, 'name': 'dfg', 'price': 345.0, 'qty': 54}
+2025-09-17 11:59:59,284 [INFO] Fetched all products.
+2025-09-17 12:00:08,462 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products
+2025-09-17 12:01:14,154 [INFO] Fetched all products.
+2025-09-17 12:01:21,960 [ERROR] HTTP error during create: 500 Server Error: INTERNAL SERVER ERROR for url: http://127.0.0.1:5000/products

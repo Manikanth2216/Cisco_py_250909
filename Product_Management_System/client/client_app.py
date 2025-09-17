@@ -64,7 +64,7 @@ Your Option:'''
             print("Invalid option. Please choose a number between 1 and 6.")
 
     
-    except repo.ProductNotFound as ex:
+    except repo.ProductNotFoundError as ex:
         print(f"{ex}")
     except repo.ProductAlreadyExistError as ex:
         print(f"{ex}")

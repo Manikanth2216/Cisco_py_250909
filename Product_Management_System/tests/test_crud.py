@@ -1,3 +1,6 @@
+"""
+Unit tests for client.repo create_product functionality.
+"""
 import pytest
 from unittest.mock import patch
 import client.repo as repo
@@ -5,11 +8,17 @@ from app.models import Product
 
 @pytest.fixture(autouse=True)
 def setup():
+    """
+    Fixture for setup/teardown logic (currently unused).
+    """
     # Placeholder for any setup/teardown logic (optional for now)
     yield
 
 @patch('client.repo.requests.post')
 def test_create_product(mock_post):
+    """
+    Test the create_product function in client.repo.
+    """
     # Create a SQLAlchemy model instance (not persisted to any DB)
     product = Product(id=1, name='Laptop', qty=10, price=50000)
     product_data = product.to_dict()

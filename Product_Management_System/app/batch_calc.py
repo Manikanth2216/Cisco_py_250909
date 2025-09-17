@@ -10,7 +10,6 @@ def _sum_qty(products: List[Product]) -> int:
 
 
 def _fetch_all_products() -> List[Product]:
-    # Lazy import to avoid circular app refs
     return Product.query.order_by(Product.id.asc()).all()
 
 
@@ -36,7 +35,6 @@ def total_stock_processes(batch_size: int = 10) -> int:
 
 
 async def _async_sum(products: List[Product]) -> int:
-    # Simulate async workload; real life might await I/O (e.g., remote calls)
     await asyncio.sleep(0)
     return sum(p.qty for p in products)
 

@@ -991,3 +991,4 @@ sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed
 >>>>>>> 124dcb102cba3b072fb29729ddca7058645efe4d
 >>>>>>> 9759cf842f709ae20aae0cc95107769e6edc63ee
 >>>>>>> 7b3e258f889d0a41f7995a630ca02b94e968ef84
+2025-09-17 14:17:33,141 [INFO] Fetched all products.
